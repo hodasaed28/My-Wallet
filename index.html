@@ -2,13 +2,51 @@
 <html lang="ar" dir="rtl">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
     <title>محفظتي الذكية</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link type="stylesheet" src="./src/index.css" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              darkBg: "#070d1e",
+              cardBg: "#111c38",
+              incomeGreen: "#10b981",
+              expenseRed: "#ef4444",
+              visaPurple: "#8b5cf6",
+              ewalletBlue: "#3b82f6",
+              amberWarn: "#f59e0b"
+            }
+          }
+        }
+      }
+    </script>
+    <!-- خط Cairo -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+      * {
+        font-family: 'Cairo', sans-serif !important;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: #070d1e;
+        color: #f1f5f9;
+        margin: 0;
+        padding: 0;
+        -webkit-tap-highlight-color: transparent;
+      }
+      /* إخفاء شريط التمرير */
+      ::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
   </head>
-  <body class="bg-[#0b1329] text-slate-100 font-['Cairo'] antialiased select-none">
+  <body class="bg-[#070d1e] text-slate-100 antialiased select-none min-h-screen">
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
